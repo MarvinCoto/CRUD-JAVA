@@ -52,8 +52,14 @@ public class frmMenu extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Taquería Los Heroes");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, -1, -1));
+
+        txtNombre.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 320, 40));
+
+        txtIngredientes.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(txtIngredientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 320, 40));
+
+        txtPrecio.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 320, 40));
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -82,6 +88,8 @@ public class frmMenu extends javax.swing.JFrame {
 
         btnBuscar.setText("Buscar");
         jPanel1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 70, 30));
+
+        txtBuscar.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 320, 40));
 
         jtbMenu.setModel(new javax.swing.table.DefaultTableModel(
