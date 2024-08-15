@@ -21,46 +21,60 @@ public class ctrlMenu implements MouseListener, KeyListener {
                
        //Siempre poner todos los botones que vamos a ocupar
        frmMenu.btnGuardar.addMouseListener(this);
+       frmMenu.jtbMenu.addMouseListener(this);
+       
+       ModeloMenu.Mostrar(vistaMenu.jtbMenu);
     }
+    
     
     @Override
     public void mouseClicked(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        if(e.getSource() == vistaMenu.btnGuardar){
+            
+            ModeloMenu.setNombre(vistaMenu.txtNombre.getText());
+            ModeloMenu.setPrecio(Double.parseDouble(vistaMenu.txtPrecio.getText()));
+            ModeloMenu.setIngredientes(vistaMenu.txtIngredientes.getText());
+            
+            ModeloMenu.Guardar(); 
+            ModeloMenu.Mostrar(vistaMenu.jtbMenu);
+        }
+        
+        if(e.getSource() == vistaMenu.btnEliminar){
+            
+            ModeloMenu.Eliminar(vistaMenu.jtbMenu);
+            ModeloMenu.Mostrar(vistaMenu.jtbMenu);
+        
+        }
+        
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void keyTyped(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

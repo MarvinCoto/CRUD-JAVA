@@ -4,6 +4,10 @@
  */
 package vista;
 
+
+import controlador.ctrlMenu;
+import modelo.Menu;
+
 /**
  *
  * @author Estudiante
@@ -15,6 +19,14 @@ public class frmMenu extends javax.swing.JFrame {
      */
     public frmMenu() {
         initComponents();
+    }
+    
+    public static void initFrmMenu(){
+         Menu modelo = new Menu();
+         frmMenu vista = new frmMenu();
+         ctrlMenu controlador = new ctrlMenu(modelo, vista);
+         
+         vista.setVisible(true);  
     }
 
     /**
@@ -151,7 +163,7 @@ public class frmMenu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmMenu().setVisible(true);
+                initFrmMenu();
             }
         });
     }
